@@ -2,26 +2,18 @@
 using namespace std;
 
 int main(){
-    int x[1000];
-    int i = 1,j = 0,k = 0;
+    int i=1,even=0,odd=0;
+    while(i != 0){
     cout << "Enter an integer: ";
-    cin >> x[0];
-    if(x[0] == 0){
-        j=0;
-        k=0;
-    }
-    else do{
-        cout << "Enter an integer: ";
-        cin >> x[i];
-        i++;
-        if(x[i-1] %2 == 0){
-            j++;
+    cin >> i;
+        if(i%2 == 0){
+            even++;
         }
         else{
-            k++;
+            odd++;
         }
-    }while(x[i-1] != 0);
-    cout << "#Even numbers = " << j;
-    cout << "\n#Odd numbers = " << k;
+    }
+    cout << "#Even numbers = " << even-1 << endl;
+    cout << "#Odd numbers = " << odd;
     return 0;
 }
